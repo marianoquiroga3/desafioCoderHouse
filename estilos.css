@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    background: 
+      radial-gradient(black 3px, transparent 4px),
+      radial-gradient(black 3px, transparent 4px),
+      linear-gradient(#fff 4px, transparent 0),
+      linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+      linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+    #fff;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    font-family: 'Madame', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Madame', sans-serif;
+    color: #000000
+}
+
+  /* HEADER */
+    
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+    border-bottom: 2px solid #fff;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.title h1 {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 8em;
+    font-family: 'Madame', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu{
+    display: flex;
+    gap: 2rem;
+}
+.menu__link{
+    font-size: 3em;
+    padding: 2rem;
+    border: 2px solid #fff;
+    transition: all 1s;
+}
+
+.menu__link:hover{
+    border-color:#3F3E40; 
+}
+
+.container{
+    background-color: #fff;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.header img{
+    width: 150px;
+    height: 150px;
+    margin:1.6em auto;
+    display: block;
+}
+
+.sidebar img{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.sidebar p {
+    font-family: 'Gogh', sans-serif;
+
+}
+
+.container > .header,
+.container > .contenido,
+.container > .sidebar,
+.container > .footer,
+.container > div {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #000000;
+}
+
+.container > .header,
+.container > .footer {
+    grid-column: 1/6 ;
+    background: #3F3E40;
+    color: #fff;
+}
+
+.container > .contenido {
+    grid-column: span 3;
+}
+
+.contenido > .articulos {
+    background: #3F3E40;
+    padding: 20px;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.articulos h2{
+    font-size: 4em;
+    font-style: normal;
+    padding: 10px;
+}
+
+.articulos p{
+    font-size: 1.3em;
+    font-family: 'Gogh', sans-serif;
+    padding: 10px;
+}
+
+.container > .sidebar {
+    grid-column: span 2;
+    background-color: #3F3E40;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container > .recetas{
+    background: #3F3E40;
+    color: #fff;
+    font-size: 2em;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container > .recetas:hover {
+    cursor: pointer;
+    color: #000000;
+    background-color: #fff;
+    transition: all 0.5s ease;
+}
+
+.footer{
+    font-size: 2.5em;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px){
+    .title h1{
+        font-size: 5em;
+    }
+
+    .header img{
+        width: 100px;
+        height: 100px;
+        margin:1.6em auto;
+        display: block;
+    }
+
+    .header{
+        text-align: center;
+    }
+
+    .container .contenido {
+        grid-column: 1/6;
+    }
+    .container .sidebar {
+        grid-column: 1/6;
+    }
+
+}
